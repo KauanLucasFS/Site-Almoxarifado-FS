@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almoxarifado - carrinho</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="src/styles/carrinho.css">
 </head>
 <body>
-    
+  <header>
+    <button onclick="history.back()">←</button>
+    <h1>Finalizar</h1>
+  </header>
+
+  <main>
+    <section class="dados">
+      <p>Matrícula: <span>Adicionar...</span></p>
+      <p>Colaborador: <span>Adicionar...</span></p>
+      <p>Lacre rompido: <span>Adicionar...</span></p>
+      <p>Lacre novo: <span>Adicionar...</span></p>
+    </section>
+
+    <section class="itens">
+      <h2>Itens</h2>
+      <div class="item">
+        <img src="src/images/imagem.jpg" alt="Produto">
+        <div>
+          <p>Nome do produto</p>
+          <p>Descrição</p>
+          <p>Quantidade: 01</p>
+        </div>
+        <p>Código</p>
+      </div>
+    </section>
+
+    <section class="resumo">
+      <p>Quantidade: <span>2</span></p>
+      <p>Total: <span>2</span></p>
+    </section>
+
+    <button class="finalizar">Fechar pedido</button>
+  </main>
+
+  <script src="src/js/carrinho.js"></script>
 </body>
 </html>

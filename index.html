@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almoxarifado - Menu Principal/title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materiais</title>
+  <link rel="stylesheet" href="src/styles/index.css">
 </head>
+
 <body>
     
+  <header>
+    <input type="text" placeholder="Buscar">
+    <button>Pedidos</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Materiais</h2>
+      <div class="grid-produtos">
+        <!-- Cards de produtos -->
+        <article class="produto">
+          <img src="src/images/imagem.jpg" alt="Produto">
+          <p>Id</p>
+          <p>Nome do produto</p>
+          <strong>Código</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <nav class="menu-bottom">
+    <a href="index.html">🏠</a>
+    <a href="#">➕</a>
+    <a href="carrinho.html">🛒</a>
+  </nav>
+
+  <script src="src/js/index.js"></script>
 </body>
 </html>
