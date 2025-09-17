@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100% ;
+    background-color: #2E5C33;
+}
+.texto {
+    margin: 1%;
+    color: #F2B705;
+}
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1%;
+}
+
+.principal .dadosCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.principal .dadosCadastro .dados-colaborador {
+    margin: 10%;
+}
+
+.btnEnvioCadastro {
+
+}

@@ -13,7 +13,7 @@ header {
   align-items: center;
 }
 
-header input {
+header #searchInput {
   flex: 1;
   padding: 8px;
   margin-right: 10px;
@@ -27,24 +27,24 @@ main {
   background: #f9f9f9;
 }
 
-.grid-produtos {
+/* .grid-produtos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-}
+} */
 
-.produto {
+/* .produto {
   background: #fff;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
+} */
 
-.produto img {
+/* .produto img {
   width: 100%;
   border-radius: 6px;
-}
+} */
 
 .menu-bottom {
   display: flex;
@@ -53,6 +53,5 @@ main {
   padding: 10px 0;
   background: #fff;
   border-top: 1px solid #ddd;
-  position: sticky;
   bottom: 0;
 }

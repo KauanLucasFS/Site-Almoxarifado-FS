@@ -2,7 +2,7 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
   background: #f9f9f9;
 }
 
@@ -13,32 +13,6 @@ header {
   text-align: center;
 }
 
-.lista-pedidos {
-  flex: 1;
-  padding: 10px;
-}
-
-.pedido {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.pedido img {
-  width: 60px;
-  height: 60px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-.pedido div {
-  flex: 1;
-}
-
 .menu-bottom {
   display: flex;
   justify-content: space-around;
@@ -46,6 +20,5 @@ header {
   padding: 10px 0;
   background: #fff;
   border-top: 1px solid #ddd;
-  position: sticky;
   bottom: 0;
 }

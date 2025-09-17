@@ -1,0 +1,9 @@
+.cabeca {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btnVoltar  {
+    padding: 10px;
+}
