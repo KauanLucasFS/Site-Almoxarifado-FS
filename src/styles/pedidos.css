@@ -17,6 +17,23 @@ main {
   padding: 10px;
 }
 
+.pedido {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  background: #f9f9f9;
+}
+
+.pedido h3 {
+  margin: 0 0 5px 0;
+}
+
+.pedido ul {
+  margin: 5px 0;
+  padding-left: 20px;
+}
+
 .pedido-item {
   background: #fff;
   border-radius: 10px;

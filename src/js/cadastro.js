@@ -1,56 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.dadosCadastro');
-  if (!form) return;
+// Quando carregar a página, verificar se já tem cadastro
+window.onload = function () {
+  const colaborador = localStorage.getItem("colaborador");
+  if (colaborador) {
+    // Se já tem cadastro, vai direto pro estoque
+    window.location.href = "index.html";
+  }
+};
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+function salvarCadastro() {
+  const matricula = document.getElementById("matricula").value.trim();
+  const nome = document.getElementById("nome").value.trim();
+  const cidade = document.getElementById("cidade").value;
+  const email = document.getElementById("email").value.trim();
 
-    const matricula = form.querySelector('[name="matricula"]').value.trim();
-    const nome = form.querySelector('[name="nome"]').value.trim();
-    const cidade = form.querySelector('[name="cidade"]').value.trim();
-    const email = form.querySelector('[name="email"]').value.trim();
+  if (!matricula || !nome || !cidade || !email) {
+    alert("Preencha todos os campos!");
+    return;
+  }
 
-    if (!matricula || !nome || !cidade || !email) {
-      alert('Preencha todos os campos!');
-      return;
-    }
+  const colaborador = { matricula, nome, cidade, email };
 
-    const colaborador = {
-      matricula,
-      nome,
-      cidade,
-      email,
-      cargo: '',   // Adicione se houver campo
-      numero: ''   // Adicione se houver campo
-    };
-    
-    // Salva localmente para visualização imediata
-    localStorage.setItem('colaborador', JSON.stringify(colaborador));
+  // Salvar no navegador (provisório)
+  localStorage.setItem("colaborador", JSON.stringify(colaborador));
 
-    
-    // Salva no SharePoint (exemplo)
-    // try {
-    //   await fetch('https://SEU_SITE.sharepoint.com/_api/web/lists/getbytitle(\'Colaboradores\')/items', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Accept': 'application/json;odata=verbose',
-    //       'Content-Type': 'application/json;odata=verbose',
-    //       'X-RequestDigest': document.getElementById('__REQUESTDIGEST').value // SharePoint token
-    //     },
-    //     body: JSON.stringify({
-    //       __metadata: { type: 'SP.Data.ColaboradoresListItem' },
-    //       Matricula: matricula,
-    //       Nome: nome,
-    //       Cidade: cidade,
-    //       Email: email
-    //       // Adicione outros campos conforme necessário
-    //     })
-    //   });
-    //   alert('Cadastro realizado com sucesso!');
-    //   window.location.href = "perfil.html";
-    // } catch (err) {
-    //   alert('Erro ao salvar no SharePoint.');
-    //   console.error(err);
-    // }
-  });
-});
+  alert("Cadastro realizado com sucesso!");
+  window.location.href = "index.html"; // redireciona para Estoque
+}
