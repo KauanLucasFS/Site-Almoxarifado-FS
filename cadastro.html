@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Almoxarifado</title>
 
+    <link rel="stylesheet" href="src/styles/responsive.css">
+    <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/cadastro.css">
 </head>
 
@@ -18,20 +20,27 @@
         <h2 class="texto">Criar uma conta</h2>
         <p class="texto">Inserir seu e-mail cooperativo para se cadastrar neste site</p>
 
-        <section class="dadosCadastro">
-            <input class="dados-colaborador" type="text" name="matricula" placeholder="Matrícula">
-            <input class="dados-colaborador" type="text" name="nome" placeholder="Nome">
-            <input class="dados-colaborador" type="text" name="cidade" placeholder="Cidade">
-            <input class="dados-colaborador" type="email" name="email" placeholder="E-mail">
-        </section>
+       <section class="dadosCadastro">
+  <input class="dados-colaborador" type="text" id="matricula" placeholder="Matrícula" required>
+  <input class="dados-colaborador" type="text" id="nome" placeholder="Nome" required>
+  
+  <select class="dados-colaborador" id="cidade" required>
+    <option value="">Selecione a cidade</option>
+    <option value="Lucas">Lucas do Rio Verde</option>
+    <option value="Sorriso">Sorriso</option>
+    <option value="Primavera">Primavera do Leste</option>
+  </select>
+  
+  <input class="dados-colaborador" type="email" id="email" placeholder="E-mail corporativo" required>
+</section>
 
-        <button class="btnEnvioCadastro">Continuar</button>
+<button class="btnEnvioCadastro" onclick="salvarCadastro()">Continuar</button>
 
         <p class="texto">ou</p>
 
         <button class="envio-cadastro-google-365 texto">Continuar com Google ou 365</button>
     </main>
-
+    <script src="src/js/cadastro.js"></script>
 </body>
 
 </html>

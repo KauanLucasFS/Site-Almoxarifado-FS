@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="src/styles/responsive.css">
+    <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/perfil.css">
 </head>
+
 <body>
-    
+
     <header class="cabeca">
-       <a href="index.html"> <button class="btnVoltar"></button> </a>
-        <h1>Cadastro do Colaborador</h1>
+        <a href="index.html"> <button class="btnVoltar"></button> </a>
+        <h1>Perfil do Colaborador</h1>
     </header>
 
-    <Main>
-        <!-- Apenas Ilustrativo, informações serão extraidas do SharePoint e serão exibidas nos respectivos campos -->
+    <main>
+        <h2>Cadastro do Colaborador</h2>
+        <p><strong>Matrícula:</strong> <span id="perfilMatricula"></span></p>
+        <p><strong>Nome:</strong> <span id="perfilNome"></span></p>
+        <p><strong>Cidade:</strong> <span id="perfilCidade"></span></p>
+        <p><strong>Email:</strong> <span id="perfilEmail"></span></p>
 
-        <h3 class="dadosUsuario">Matricula</h3>
-        <h3 class="dadosUsuario">Colaborador</h3>
-        <h3 class="dadosUsuario">Cidade</h3>
-        <h3 class="dadosUsuario">Cargo</h3>
-        <h3 class="dadosUsuario">Email</h3>
-        <h3 class="dadosUsuario">Numero</h3>
+        <button onclick="editarPerfil()">Alterar informações</button>
+        <button onclick="salvarPerfil()">Salvar Alteração</button>
+    </main>
 
-    </Main>
-
-
+    <script src="src/js/perfil.js"></script>
 </body>
+
 </html>

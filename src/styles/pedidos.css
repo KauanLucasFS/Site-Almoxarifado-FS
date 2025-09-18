@@ -1,24 +1,67 @@
-
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
   background: #f9f9f9;
 }
 
 header {
-  padding: 10px;
+  padding: 16px 12px;
   background: #fff;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
   text-align: center;
 }
 
+main {
+  flex: 1;
+  padding: 10px;
+}
+
+.pedido-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.pedido-item img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.pedido-item div {
+  flex: 1;
+}
+
 .menu-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid #eee;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 0;
-  background: #fff;
-  border-top: 1px solid #ddd;
-  bottom: 0;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+.menu-bottom a {
+  font-size: 1.5rem;
+  color: #111;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: color 0.2s;
+}
+
+.menu-bottom a.active,
+.menu-bottom a:hover {
+  color: #000;
+  font-weight: bold;
 }

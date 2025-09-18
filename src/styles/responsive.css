@@ -1,0 +1,14 @@
+@media (max-width: 600px) {
+  .grid-produtos {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  header, .menu-bottom {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 8px;
+  }
+  .produto {
+    padding: 10px 4px;
+  }
+}

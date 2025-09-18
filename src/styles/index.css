@@ -2,6 +2,124 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: #fff;
+  color: #111;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pesquisa {
+  flex: 1;
+}
+
+.pesquisa input[type="search"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background: #fafafa;
+}
+
+.button-top button {
+  background: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.button-top button:hover {
+  background: #eee;
+}
+
+main {
+  flex: 1;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.produto {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.produto h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.produto p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.menu-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+.menu-bottom a {
+  font-size: 1.5rem;
+  color: #111;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: color 0.2s;
+}
+
+.menu-bottom a.active,
+.menu-bottom a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+
+
+
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 header {
@@ -11,6 +129,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 16px 12px;
+
+}
+
+header h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 header #searchInput {
@@ -27,24 +154,24 @@ main {
   background: #f9f9f9;
 }
 
-/* .grid-produtos {
+.grid-produtos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-} */
+}
 
-/* .produto {
+.produto {
   background: #fff;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-} */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 
-/* .produto img {
+.produto img {
   width: 100%;
   border-radius: 6px;
-} */
+}
 
 .menu-bottom {
   display: flex;
@@ -54,4 +181,4 @@ main {
   background: #fff;
   border-top: 1px solid #ddd;
   bottom: 0;
-}
+} */

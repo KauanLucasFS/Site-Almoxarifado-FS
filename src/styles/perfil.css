@@ -1,9 +1,69 @@
-.cabeca {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+body {
+    background: #fff;
+    color: #111;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
-.btnVoltar  {
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabeca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 12px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.cabeca h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.btnVoltar {
     padding: 10px;
+    background: #000000;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+.dadosUsuario {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 12px auto;
+    border: 1px solid #eee;
+    max-width: 50%;
+    min-width: 20%;
+    font-size: 1rem;
+}
+
+.alterar-informacoes,
+.salvar-alteracao {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 14px 0;
+    width: 50%;
+    margin: 12px 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.alterar-informacoes:hover,
+.salvar-alteracao:hover {
+    background: #222;
 }
