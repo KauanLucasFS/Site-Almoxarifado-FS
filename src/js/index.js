@@ -75,3 +75,98 @@ renderProdutos(produtos);
     <a id="menuPedidos" title="Pedidos" href="pedidos.html">➕</a>
     <a id="menuCarrinho" title="Carrinho" href="carrinho.html">🛒</a>
   `;
+
+
+//   export function getColaborador() {
+//   return JSON.parse(localStorage.getItem('colaborador')) || {
+//     matricula: '',
+//     nome: '',
+//     cidade: '',
+//     cargo: '',
+//     email: '',
+//     numero: ''
+//   };
+// }
+
+// export function setColaborador(data) {
+//   localStorage.setItem('colaborador', JSON.stringify(data));
+// }
+
+// Use em cadastro.js e perfil.js:
+
+// import { getColaborador, setColaborador } from './utils/colaborador.js';
+// // ...use getColaborador() e setColaborador()...
+
+// Exemplo para perfil.js:
+
+// import { getColaborador, setColaborador } from './utils/colaborador.js';
+
+// function renderPerfil(editMode = false) {
+//   const colaborador = getColaborador();
+//   // ...renderização como antes...
+// }
+// HTML com labels e alt descritivo:
+// <label for="matricula">Matrícula</label>
+// <input id="matricula" name="matricula" type="text" required>
+// <img src="src/images/melancia.jpg" alt="Foto de Melancia"></img>
+
+
+// body {
+//   background: #fff;
+//   color: #222;
+// }
+// .btnEnvioCadastro {
+//   background: #000;
+//   color: #fff;
+// }
+// :root {
+//   --cor-primaria: #000;
+//   --cor-secundaria: #fff;
+//   --borda-radius: 8px;
+//   --fonte: 'Inter', Arial, sans-serif;
+// }
+
+// Use nas demais CSS:
+
+// body {
+//   font-family: var(--fonte);
+// }
+// .btnEnvioCadastro {
+//   background: var(--cor-primaria);
+//   color: var(--cor-secundaria);
+//   border-radius: var(--borda-radius);
+// }
+
+// Função para salvar colaborador via API:
+// async function salvarColaboradorSharePoint(colaborador) {
+//   await fetch('https://SEU_SITE.sharepoint.com/_api/web/lists/getbytitle(\'Colaboradores\')/items', {
+//     method: 'POST',
+//     headers: {
+//       'Accept': 'application/json;odata=verbose',
+//       'Content-Type': 'application/json;odata=verbose',
+//       'X-RequestDigest': document.getElementById('__REQUESTDIGEST').value
+//     },
+//     body: JSON.stringify({
+//       __metadata: { type: 'SP.Data.ColaboradoresListItem' },
+//       Matricula: colaborador.matricula,
+//       Nome: colaborador.nome,
+//       Cidade: colaborador.cidade,
+//       Email: colaborador.email
+//     })
+//   });
+// }
+
+// Exemplo para perfil.js:
+
+// const colaborador = getColaborador();
+// if (!colaborador.nome) {
+//   alert('Dados do colaborador não encontrados. Faça o cadastro.');
+//   window.location.href = 'cadastro.html';
+// }
+
+// Perfil editável:
+
+// document.querySelector('.alterar-informacoes').onclick = () => renderPerfil(true);
+// document.querySelector('.salvar-alteracao').onclick = () => {
+//   // ...salva e volta para visualização...
+// };
